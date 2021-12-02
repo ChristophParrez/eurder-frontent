@@ -6,7 +6,8 @@ import { ItemsViewComponent } from "./components/items-view/items-view.component
 import { CustomersViewComponent } from "./components/customers-view/customers-view.component";
 
 const routes: Routes = [
-  { path: '', component: HomeViewComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeViewComponent },
   { path: 'items', component: ItemsViewComponent },
   { path: 'customers', component: CustomersViewComponent },
   { path: 'basket', component: HomeViewComponent },

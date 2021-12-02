@@ -1,0 +1,39 @@
+@import '../../../sass/variables';
+
+header {
+  display: flex;
+  //align-items: center;
+  //background: red;
+}
+
+.logo {
+  //background: green;
+  flex-shrink: 0;
+}
+
+nav {
+  //background: blue;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  a {
+    //color: white;
+    //background: bisque;
+    color: $body-text-color;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 300ms;
+    &:hover {
+      //background: $hover-background-color
+      color: $accent-color;
+    }
+    &.active {
+      //background: $accent-color;
+      //color: $accent-color-contrast;
+      color: $accent-color;
+    }
+  }
+}
