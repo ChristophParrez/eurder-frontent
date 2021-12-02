@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutViewComponent implements OnInit {
 
+  year: string = new Date().getFullYear().toString();
+
   constructor() { }
 
   ngOnInit(): void {

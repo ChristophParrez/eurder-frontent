@@ -11,10 +11,12 @@ export class ItemsViewComponent implements OnInit {
 
   items: Item[] = [];
 
-  constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService) {
+  }
 
   ngOnInit(): void {
-    this.getItems();
+    // this.getItems();
+    setTimeout(() => this.getItems(), 5000);
   }
 
   getItems(): void {

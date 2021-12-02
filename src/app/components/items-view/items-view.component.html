@@ -1,11 +1,11 @@
 <main-title>Items</main-title>
 <div class="items">
-  <div *ngFor="let item of items">
-    {{item.name}}
-    <img src="assets/images/item-image.png" alt="" />
-    <div>
-      <span>Price: {{item.price}}</span>
-      <span><img src="{{item.stockUrgency | stockUrgency}}" alt=""></span>
+  <div class="item" *ngFor="let item of items">
+    <div class="name">{{ item.name }}</div>
+    <img src="assets/images/image-not-found.svg" alt="">
+    <div class="price-stock">
+      <div class="price"><span class="currency-symbol">€</span>{{ item.price | currency:'EUR':'':'2.2-4' }}</div>
+      <div class="stock">{{ item.stockUrgency | stockUrgencyLabel | titlecase }} <img src="assets/images/stock/{{ item.stockUrgency | stockUrgencyImage }}" alt=""></div>
     </div>
   </div>
 </div>
