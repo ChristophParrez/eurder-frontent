@@ -7,6 +7,7 @@ import { HomeViewComponent } from './components/home-view/home-view.component';
 import { AboutViewComponent } from './components/about-view/about-view.component';
 import { ItemsViewComponent } from './components/items-view/items-view.component';
 import { CustomersViewComponent } from './components/customers-view/customers-view.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CustomersViewComponent } from './components/customers-view/customers-vi
     HomeViewComponent,
     AboutViewComponent,
     ItemsViewComponent,
-    CustomersViewComponent
+    CustomersViewComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
