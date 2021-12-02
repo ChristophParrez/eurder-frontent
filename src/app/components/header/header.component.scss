@@ -1,5 +1,9 @@
 @import '../../../sass/variables';
 
+:host {
+  padding: $main-padding-x;
+}
+
 header {
   display: flex;
   //align-items: center;

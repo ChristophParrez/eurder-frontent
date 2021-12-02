@@ -1,0 +1,22 @@
+@import '../sass/variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-between;
+  min-height: 100vh;
+  //background: red;
+}
+
+router-outlet {
+  display: none;
+}
+
+router-outlet + ::ng-deep * {
+  flex: 1;
+  padding: 0 $main-padding-x;
+}
+
+router-outlet + * {
+  background: green;
+}

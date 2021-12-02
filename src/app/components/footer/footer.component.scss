@@ -1,0 +1,8 @@
+@import '../../../sass/variables';
+
+:host {
+  background: $accent-color;
+  color: $accent-color-contrast;
+  text-align: center;
+
+}
