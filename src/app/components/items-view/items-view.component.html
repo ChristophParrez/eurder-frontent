@@ -1,1 +1,11 @@
-items...
+<main-title>Items</main-title>
+<div class="items">
+  <div *ngFor="let item of items">
+    {{item.name}}
+    <img src="assets/images/item-image.png" alt="" />
+    <div>
+      <span>Price: {{item.price}}</span>
+      <span><img src="{{item.stockUrgency | stockUrgency}}" alt=""></span>
+    </div>
+  </div>
+</div>

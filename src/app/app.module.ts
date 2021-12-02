@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeViewComponent } from './components/home-view/home-view.component';
@@ -9,6 +9,8 @@ import { ItemsViewComponent } from './components/items-view/items-view.component
 import { CustomersViewComponent } from './components/customers-view/customers-view.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MainTitleComponent } from './components/main-title/main-title.component';
+import { StockUrgencyPipe } from './pipe/stock-urgency.pipe';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,14 @@ import { FooterComponent } from './components/footer/footer.component';
     ItemsViewComponent,
     CustomersViewComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MainTitleComponent,
+    StockUrgencyPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
