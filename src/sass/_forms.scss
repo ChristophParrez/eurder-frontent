@@ -19,6 +19,15 @@ input, textarea, select {
     border: 1px solid $accent-color;
     outline: none;
   }
+  &.btn {
+    cursor: pointer;
+    padding: 20px;
+    &.primary {
+      background: $accent-color;
+      color: $accent-color-contrast;
+      border: none;
+    }
+  }
 }
 
 textarea {

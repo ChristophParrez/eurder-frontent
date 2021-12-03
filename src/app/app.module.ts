@@ -13,12 +13,13 @@ import { MainTitleComponent } from './components/main-title/main-title.component
 import { StockUrgencyImagePipe } from './pipe/stock-urgency-image.pipe';
 import { StockUrgencyLabelPipe } from './pipe/stock-urgency-label.pipe';
 import { ContentComponent } from './components/content/content.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NameFilterPipe } from './pipe/name-filter.pipe';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { ItemDetailsViewComponent } from './components/item-details-view/item-details-view.component';
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ItemEditViewComponent } from './components/item-edit-view/item-edit-view.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,15 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     DialogComponent,
     ItemDetailsViewComponent,
     ToolBarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ItemEditViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

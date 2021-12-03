@@ -1,12 +1,2 @@
-<div *ngIf="item">
-<main-title>Item {{ item.id }}</main-title>
-  <label for="">Name</label>
-  <input type="text" value="{{ item.name }}">>
-  <label for="">Description</label>
-  <textarea rows="5">{{ item.description }}</textarea>
-  <label for="">Price</label>
-  <input type="number" value="{{ item.price }}">
-  <label for="">Stock</label>
-  <input type="number" value="{{ item.amountOfStock }}">
-</div>
 <page-not-found *ngIf="!item"></page-not-found>
+<app-item-edit-view *ngIf="item" [item]="item"></app-item-edit-view>
