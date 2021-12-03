@@ -10,9 +10,10 @@ import { ItemService } from "../../service/item.service";
 export class ItemsViewComponent implements OnInit {
 
   items: Item[] = [];
-  filterText: any;
+  nameFilterText: string;
 
   constructor(private itemService: ItemService) {
+    this.nameFilterText = '';
   }
 
   ngOnInit(): void {
@@ -25,6 +26,6 @@ export class ItemsViewComponent implements OnInit {
   }
 
   setFilter(filterText: any) {
-    this.filterText = filterText;
+    this.nameFilterText = filterText;
   }
 }

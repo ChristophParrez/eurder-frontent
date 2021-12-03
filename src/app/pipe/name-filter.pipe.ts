@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NameFilterPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(array: any[], name: string): any[] {
+    return array.filter(element => element.name.toLowerCase().includes(name.toLowerCase()));
   }
 
 }

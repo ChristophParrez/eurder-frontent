@@ -1,7 +1,7 @@
 <main-title [showFilter]="true" (filterChanged)="setFilter($event)">Items</main-title>
-Received from filter component: {{ filterText }}
-<div class="items">
-  <div class="item" *ngFor="let item of items">
+<div *ngIf="nameFilterText">Searching for name: <strong>{{ nameFilterText }}</strong></div>
+<div class="items" *ngIf="items">
+  <div class="item" *ngFor="let item of items | nameFilter: nameFilterText">
     <div class="name">{{ item.name }}</div>
     <img src="assets/images/image-not-found.svg" alt="">
     <div class="price-stock">
@@ -10,3 +10,4 @@ Received from filter component: {{ filterText }}
     </div>
   </div>
 </div>
+<dialog></dialog>
