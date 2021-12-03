@@ -3,7 +3,7 @@
 label {
   display: block;
   font-weight: 600;
-  margin: 20px 0 10px 0;
+  margin: 15px 0;
 }
 
 input, textarea, select {
@@ -13,7 +13,7 @@ input, textarea, select {
   display: block;
   padding: 10px;
   width: 100%;
-  margin: 5px 0;
+  margin: 15px 0;
   transition: all 600ms ease-out;
   &:active, &:focus, &:focus-visible {
     border: 1px solid $accent-color;
