@@ -16,6 +16,7 @@ import { ContentComponent } from './components/content/content.component';
 import { FormsModule } from "@angular/forms";
 import { NameFilterPipe } from './pipe/name-filter.pipe';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { ItemDetailsViewComponent } from './components/item-details-view/item-details-view.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
     StockUrgencyLabelPipe,
     ContentComponent,
     NameFilterPipe,
-    DialogComponent
+    DialogComponent,
+    ItemDetailsViewComponent
   ],
   imports: [
     BrowserModule,

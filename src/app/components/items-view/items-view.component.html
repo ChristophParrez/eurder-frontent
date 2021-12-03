@@ -1,7 +1,9 @@
-<main-title [showFilter]="true" (filterChanged)="setFilter($event)">Items</main-title>
+<main-title [showFilter]="true" (filterChanged)="setFilter($event)">
+  Items <a routerLink="/items/new">Add Item</a>
+</main-title>
 <div *ngIf="nameFilterText">Searching for name: <strong>{{ nameFilterText }}</strong></div>
 <div class="items" *ngIf="items">
-  <div class="item" *ngFor="let item of items | nameFilter: nameFilterText">
+  <div class="item" *ngFor="let item of items | nameFilter: nameFilterText" routerLink="/items/{{item.id}}">
     <div class="name">{{ item.name }}</div>
     <img src="assets/images/image-not-found.svg" alt="">
     <div class="price-stock">
@@ -10,4 +12,9 @@
     </div>
   </div>
 </div>
-<dialog></dialog>
+<!--
+<app-dialog>
+  <div>I'm inside the dialog</div>
+  <app-about-view></app-about-view>
+</app-dialog>
+-->

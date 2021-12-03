@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-dialog',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogComponent implements OnInit {
 
-  constructor() { }
+  private element: any;
+
+  constructor(private el: ElementRef) {
+    this.element = el.nativeElement;
+  }
 
   ngOnInit(): void {
+    console.log('element: ', this.element);
+    document.body.appendChild(this.element);
   }
 
 }
