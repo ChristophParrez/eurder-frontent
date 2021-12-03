@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainTitleComponent } from './components/main-title/main-title.component';
 import { StockUrgencyImagePipe } from './pipe/stock-urgency-image.pipe';
 import { StockUrgencyLabelPipe } from './pipe/stock-urgency-label.pipe';
+import { ContentComponent } from './components/content/content.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StockUrgencyLabelPipe } from './pipe/stock-urgency-label.pipe';
     FooterComponent,
     MainTitleComponent,
     StockUrgencyImagePipe,
-    StockUrgencyLabelPipe
+    StockUrgencyLabelPipe,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

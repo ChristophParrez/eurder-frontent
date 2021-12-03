@@ -1,0 +1,29 @@
+@import '../../../sass/variables';
+
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: $main-padding-y $main-padding-x;
+  position: relative;
+}
+
+// Direct children of content component
+:host ::ng-deep > * {
+  flex: 1;
+}
+
+router-outlet {
+  display: none;
+}
+
+// TODO: Use this for a loading component while waiting for data
+.loading {
+  display: none;
+  background: #ff000075;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
