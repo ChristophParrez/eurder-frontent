@@ -9,7 +9,7 @@
     <div class="form-row">
       <label for="form-desc">Description</label>
       <textarea id="form-desc" formControlName="description" rows="5"></textarea>
-      <span class="textarea-counter">{{ curDescriptionChars }} / {{ maxDescriptionChars }}</span>
+      <app-input-counter [value]="curDescriptionChars" [max]="maxDescriptionChars"></app-input-counter>
     </div>
 
     <div class="form-row">

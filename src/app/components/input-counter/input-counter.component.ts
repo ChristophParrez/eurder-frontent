@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input-counter',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputCounterComponent implements OnInit {
 
-  constructor() { }
+  @Input() value: number = 0;
+  @Input() max: number = 0;
+
+  isInvalid: boolean = false;
+
+  constructor() {}
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(): void {
+    this.isInvalid = this.value >= this.max;
   }
 
 }
