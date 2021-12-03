@@ -2,13 +2,13 @@
 
 :host {
   background: $background-light;
-  padding: 15px $main-padding-x;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 header {
   display: flex;
   //align-items: center;
+  padding: 15px $main-padding-x;
 }
 
 .logo {

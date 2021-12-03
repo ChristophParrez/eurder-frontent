@@ -3,29 +3,42 @@
 label {
   display: block;
   font-weight: 600;
-  margin: 15px 0;
+  margin: 0;
 }
 
 input, textarea, select {
-  background: $background-slightly-darker-than-light;
+  background: $background-light;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 5px;
   display: block;
   padding: 10px;
   width: 100%;
-  margin: 15px 0;
-  transition: all 600ms ease-out;
-  &:active, &:focus, &:focus-visible {
+  transition: all 400ms ease-out;
+  form label + & {
+    margin: 5px 0 0 0;
+  }
+  &:disabled {
+    color: rgba($body-text-color, 0.75);
+    cursor: default;
+    pointer-events: none;
+  }
+  &:focus:not(:disabled), &:focus-visible:not(:disabled) {
     border: 1px solid $accent-color;
     outline: none;
   }
   &.btn {
     cursor: pointer;
     padding: 20px;
+    &:hover {
+      background: $background-slightly-darker-than-light;
+    }
     &.primary {
       background: $accent-color;
       color: $accent-color-contrast;
       border: none;
+      &:hover {
+        background: $accent-color-hover;
+      }
     }
   }
 }
@@ -33,4 +46,25 @@ input, textarea, select {
 textarea {
   font-family: inherit;
   resize: vertical;
+}
+
+span.textarea-counter {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.form-row {
+  margin-bottom: 30px;
+  position: relative;
+  &.inline {
+    display: flex;
+    gap: 30px;
+    & > * {
+
+    }
+  }
 }

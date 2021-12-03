@@ -1,15 +1,37 @@
 <div *ngIf="item">
   <main-title>Item {{ item.id }}</main-title>
-  <form class="mt-20" [formGroup]="editItemFormGroup" (ngSubmit)="onSubmit()">
-    <label for="form-name">Name</label>
-    <input id="form-name" type="text" value="{{ item.name }}">
-    <label for="form-desc">Description</label>
-    <textarea id="form-desc" rows="5">{{ item.description }}</textarea>
-    <label for="form-price">Price</label>
-    <input id="form-price" type="number" value="{{ item.price }}">
-    <label for="form-stock">Stock</label>
-    <input id="form-stock" type="number" value="{{ item.amountOfStock }}">
-    <input class="btn primary" type="submit" value="Edit">
-    <input class="btn" type="button" routerLink=".." value="Cancel">
+  <form [formGroup]="editItemFormGroup" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <label for="form-name">Name</label>
+      <input id="form-name" formControlName="name" type="text">
+    </div>
+
+    <div class="form-row">
+      <label for="form-desc">Description</label>
+      <textarea id="form-desc" formControlName="description" rows="5"></textarea>
+      <span class="textarea-counter">{{ curDescriptionChars }} / {{ maxDescriptionChars }}</span>
+    </div>
+
+    <div class="form-row">
+      <label for="form-price">Price</label>
+      <input id="form-price" formControlName="price" type="number">
+    </div>
+
+    <div class="form-row">
+      <label for="form-stock">Stock</label>
+      <input id="form-stock" formControlName="amountOfStock" type="number">
+    </div>
+
+    <div class="form-row inline">
+      <ng-container *ngIf="!formDisabled">
+        <input class="btn primary" type="submit" value="Save">
+        <input class="btn" type="button" value="Cancel" (click)="toggleFormDisability(); populateForm()">
+      </ng-container>
+
+      <ng-container *ngIf="formDisabled">
+        <input class="btn primary" type="button" value="Edit" (click)="toggleFormDisability()">
+        <input class="btn" type="button" routerLink=".." value="Go Back">
+      </ng-container>
+    </div>
   </form>
 </div>

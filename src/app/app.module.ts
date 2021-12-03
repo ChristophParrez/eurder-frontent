@@ -20,6 +20,7 @@ import { ItemDetailsViewComponent } from './components/item-details-view/item-de
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ItemEditViewComponent } from './components/item-edit-view/item-edit-view.component';
+import { InputCounterComponent } from './components/input-counter/input-counter.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ItemEditViewComponent } from './components/item-edit-view/item-edit-vie
     ItemDetailsViewComponent,
     ToolBarComponent,
     NotFoundComponent,
-    ItemEditViewComponent
+    ItemEditViewComponent,
+    InputCounterComponent
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ html, body {
 }
 
 body {
+  color: $body-text-color;
   font-family: "Open Sans", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -36,7 +37,7 @@ a {
   border-bottom: 1px dotted $accent-color;
   transition: all 300ms;
   &:hover {
-    color: #1ba1e2;
+    color: $accent-color-hover;
     border-color: transparent;
   }
 }

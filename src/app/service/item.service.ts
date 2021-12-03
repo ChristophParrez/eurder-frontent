@@ -22,4 +22,12 @@ export class ItemService {
     return this.http.get<Item>(this.backendUrl + '/' + id);
   }
 
+  addItem(dto: any) {
+    return this.http.post(this.backendUrl, dto);
+  }
+
+  updateItem(dto: any, id: string) {
+    return this.http.put(this.backendUrl + '/' + id, dto);
+  }
+
 }
