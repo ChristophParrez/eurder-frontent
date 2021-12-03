@@ -18,4 +18,8 @@ export class ItemService {
       .pipe(map(item => item.sort((item1, item2) => item1.name.localeCompare((item2.name)))));
   }
 
+  getItem(id: string): Observable<Item> {
+    return this.http.get<Item>(this.backendUrl + '/' + id);
+  }
+
 }

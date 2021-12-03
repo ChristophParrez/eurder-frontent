@@ -18,6 +18,7 @@ import { NameFilterPipe } from './pipe/name-filter.pipe';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { ItemDetailsViewComponent } from './components/item-details-view/item-details-view.component';
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
     NameFilterPipe,
     DialogComponent,
     ItemDetailsViewComponent,
-    ToolBarComponent
+    ToolBarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

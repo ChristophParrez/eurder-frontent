@@ -11,6 +11,8 @@
 // Direct children of content component
 :host ::ng-deep > * {
   flex: 1;
+  display: flex; // Make the main view of every component a flexbox too
+  flex-direction: column;
 }
 
 router-outlet {
