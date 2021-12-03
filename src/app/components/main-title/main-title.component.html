@@ -1,3 +1,6 @@
-<h1>
-<ng-content></ng-content>
+<h1 class="title">
+  <ng-content></ng-content>
 </h1>
+<div *ngIf="showFilter">
+  <input id="name" name="name" class="form-control" placeholder="Name" [(ngModel)]="filterText" (ngModelChange)="changeFilter($event)">
+</div>

@@ -13,6 +13,8 @@ import { MainTitleComponent } from './components/main-title/main-title.component
 import { StockUrgencyImagePipe } from './pipe/stock-urgency-image.pipe';
 import { StockUrgencyLabelPipe } from './pipe/stock-urgency-label.pipe';
 import { ContentComponent } from './components/content/content.component';
+import { FormsModule } from "@angular/forms";
+import { NameFilterPipe } from './pipe/name-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { ContentComponent } from './components/content/content.component';
     MainTitleComponent,
     StockUrgencyImagePipe,
     StockUrgencyLabelPipe,
-    ContentComponent
+    ContentComponent,
+    NameFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

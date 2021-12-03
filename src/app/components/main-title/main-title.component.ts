@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'main-title',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainTitleComponent implements OnInit {
 
+  @Input() showFilter: boolean = false;
+  @Output() filterChanged = new EventEmitter<any>();
+
+  filterText: any;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeFilter(newValue: any) {
+    this.filterChanged.emit(newValue);
   }
 
 }

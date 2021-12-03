@@ -10,6 +10,7 @@ import { ItemService } from "../../service/item.service";
 export class ItemsViewComponent implements OnInit {
 
   items: Item[] = [];
+  filterText: any;
 
   constructor(private itemService: ItemService) {
   }
@@ -23,4 +24,7 @@ export class ItemsViewComponent implements OnInit {
     this.itemService.getItems().subscribe(items => this.items = items);
   }
 
+  setFilter(filterText: any) {
+    this.filterText = filterText;
+  }
 }
