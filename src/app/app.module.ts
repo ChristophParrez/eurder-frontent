@@ -17,6 +17,7 @@ import { FormsModule } from "@angular/forms";
 import { NameFilterPipe } from './pipe/name-filter.pipe';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { ItemDetailsViewComponent } from './components/item-details-view/item-details-view.component';
+import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ItemDetailsViewComponent } from './components/item-details-view/item-de
     ContentComponent,
     NameFilterPipe,
     DialogComponent,
-    ItemDetailsViewComponent
+    ItemDetailsViewComponent,
+    ToolBarComponent
   ],
   imports: [
     BrowserModule,

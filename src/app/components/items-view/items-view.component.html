@@ -1,7 +1,10 @@
 <main-title [showFilter]="true" (filterChanged)="setFilter($event)">
-  Items <a routerLink="/items/new">Add Item</a>
+  Items
 </main-title>
+<app-tool-bar>
 <div *ngIf="nameFilterText">Searching for name: <strong>{{ nameFilterText }}</strong></div>
+<a routerLink="/items/new">Add Item</a>
+</app-tool-bar>
 <div class="items" *ngIf="items">
   <div class="item" *ngFor="let item of items | nameFilter: nameFilterText" routerLink="/items/{{item.id}}">
     <div class="name">{{ item.name }}</div>
