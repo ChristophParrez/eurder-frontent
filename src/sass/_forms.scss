@@ -18,6 +18,7 @@ input, textarea, select {
     margin: 5px 0 0 0;
   }
   &:disabled {
+    background: $background-slightly-darker-than-light;
     color: rgba($body-text-color, 0.75);
     cursor: default;
     pointer-events: none;
@@ -29,6 +30,7 @@ input, textarea, select {
   &.btn {
     cursor: pointer;
     padding: 20px;
+    width: 25%;
     &:hover {
       background: $background-slightly-darker-than-light;
     }
