@@ -9,7 +9,7 @@
   <div class="item" *ngFor="let item of items | nameFilter: nameFilterText" routerLink="/items/{{item.id}}">
     <div class="item-content">
       <div class="name">{{ item.name }}</div>
-      <img src="assets/images/image-not-found.svg" alt="">
+      <img src="../../../../assets/images/image-not-found.svg" alt="">
       <div class="price-stock">
         <div class="price"><span class="currency-symbol">€</span>{{ item.price | currency:'EUR':'':'2.2-4' }}</div>
         <div class="stock">{{ item.stockUrgency | stockUrgencyLabel | titlecase }} <img

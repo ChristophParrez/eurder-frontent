@@ -38,7 +38,7 @@ input, textarea, select {
       background: $accent-color;
       color: $accent-color-contrast;
       border: none;
-      &:hover {
+      &:active, &:hover {
         background: $accent-color-hover;
       }
     }

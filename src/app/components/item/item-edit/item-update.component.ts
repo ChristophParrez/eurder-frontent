@@ -1,16 +1,20 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { ItemService } from "../../service/item.service";
+import { ItemService } from "../../../service/item.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-item-edit-view',
-  templateUrl: './item-edit-view.component.html',
-  styleUrls: ['./item-edit-view.component.scss']
+  templateUrl: './item-update.component.html',
+  styleUrls: ['./item-update.component.scss']
 })
-export class ItemEditViewComponent implements OnInit {
+export class ItemUpdateComponent implements OnInit {
 
-  @Input() item: any;
+  // @Input() item: any;
   @Input() formDisabled: any = false;
+
+  item: any;
+  loadingError: boolean = false;
 
   editItemFormGroup: FormGroup = this.formBuilder.group({
     name: '',
@@ -22,7 +26,8 @@ export class ItemEditViewComponent implements OnInit {
   curDescriptionChars: number = 0;
   maxDescriptionChars: number = 255;
 
-  constructor(private itemService: ItemService, private formBuilder: FormBuilder) { }
+  constructor(private itemService: ItemService, private formBuilder: FormBuilder, private route: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
     if (this.editItemFormGroup) this.editItemFormGroup.disable();
@@ -32,7 +37,23 @@ export class ItemEditViewComponent implements OnInit {
         this.curDescriptionChars = val.length;
       }
     });
-    this.populateForm();
+    this.getItem();
+  }
+
+  getItem(): void {
+    this.itemService.getItem(this.route.snapshot.paramMap.get('id')!).subscribe(response => {
+      this.item = response;
+      this.populateForm()
+    });
+
+    this.itemService.getItem(this.route.snapshot.paramMap.get('id')!).subscribe({
+      next: (item) => {
+        this.item = item;
+        this.populateForm();
+      },
+      error: (e) => this.loadingError = true,
+      complete: () => console.info('item is loaded')
+    });
   }
 
   populateForm(): void {
@@ -49,7 +70,7 @@ export class ItemEditViewComponent implements OnInit {
   onSubmit(): void {
     if (!this.editItemFormGroup.value.name || this.editItemFormGroup.value.name.trim() === '') return;
     this.toggleFormDisability();
-    this.itemService.updateItem(this.editItemFormGroup.value, this.item.id).subscribe(this.populateForm);
+    this.itemService.updateItem(this.editItemFormGroup.value, this.item.id).subscribe();
   }
 
   toggleFormDisability(): void {

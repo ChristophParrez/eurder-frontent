@@ -1,3 +1,5 @@
+@import "src/sass/variables";
+
 .items {
   display: flex;
   flex-wrap: wrap;
@@ -5,7 +7,9 @@
   > .item {
     width: 25%;
     text-align: center;
-    padding: 20px;
+    &:hover {
+      z-index: 999;
+    }
     @media (max-width: 700px) {
       & {
         width: 50%;
@@ -20,7 +24,18 @@
 }
 
 .item-content {
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
   cursor: pointer;
+  padding: 20px;
+  transition: all 300ms;
+  &:hover {
+    @include box-shadow;
+    background: $background-light;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    //transform: scale(1.05);
+  }
 }
 
 .name {
@@ -42,6 +57,7 @@
   font-weight: 700;
   display: flex;
   align-items: center;
+
   .currency-symbol {
     font-weight: 400;
     font-size: 1.2em;
@@ -53,6 +69,7 @@
 .stock {
   display: flex;
   align-items: center;
+
   img {
   }
 }

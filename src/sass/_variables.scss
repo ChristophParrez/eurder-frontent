@@ -12,3 +12,9 @@ $main-padding-x: 25px;
 $main-padding-y: 20px;
 
 $border-radius: 5px;
+
+@mixin box-shadow {
+  box-shadow: 0px 0px 17px 7px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 17px 7px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 17px 7px rgba(0, 0, 0, 0.15);
+}
