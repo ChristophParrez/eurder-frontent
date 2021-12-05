@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "../components/home/home.component";
 import { AboutComponent } from "../components/about/about.component";
-import { ItemsComponent } from "../components/item/items/items.component";
-import { CustomersComponent } from "../components/customers/customers.component";
+import { ItemsComponent } from "../components/item/item-list/items.component";
+import { CustomersComponent } from "../components/customer/customer-list/customers.component";
 import { ItemDetailsComponent } from "../components/item/item-details/item-details.component";
 import { ItemCreateComponent } from "../components/item/item-create/item-create.component";
 

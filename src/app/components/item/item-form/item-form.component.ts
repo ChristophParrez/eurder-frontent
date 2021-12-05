@@ -49,9 +49,7 @@ export class ItemFormComponent implements OnInit {
       price: ['', [Validators.required, Validators.min(0.01)]],
       amountOfStock: ['', [Validators.required, Validators.pattern("^[0-9]*$"), Validators.min(1)]],
     });
-
     formGroup.get("description")!.valueChanges.subscribe(val => this.curDescriptionChars = val ? val.length : 0);
-
     return formGroup;
   }
 

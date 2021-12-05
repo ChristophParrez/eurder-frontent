@@ -5,8 +5,8 @@ import { AppRoutingModule } from './router/app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { ItemsComponent } from './components/item/items/items.component';
-import { CustomersComponent } from './components/customers/customers.component';
+import { ItemsComponent } from './components/item/item-list/items.component';
+import { CustomersComponent } from './components/customer/customer-list/customers.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainTitleComponent } from './components/main-title/main-title.component';
@@ -23,6 +23,10 @@ import { ItemUpdateComponent } from './components/item/item-update/item-update.c
 import { InputCounterComponent } from './components/input-counter/input-counter.component';
 import { ItemCreateComponent } from './components/item/item-create/item-create.component';
 import { ItemFormComponent } from './components/item/item-form/item-form.component';
+import { CustomerCreateComponent } from './components/customer/customer-create/customer-create.component';
+import { CustomerDetailsComponent } from './components/customer/customer-details/customer-details.component';
+import { CustomerUpdateComponent } from './components/customer/customer-update/customer-update.component';
+import { CustomerFormComponent } from './components/customer/customer-form/customer-form.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,11 @@ import { ItemFormComponent } from './components/item/item-form/item-form.compone
     ItemUpdateComponent,
     InputCounterComponent,
     ItemCreateComponent,
-    ItemFormComponent
+    ItemFormComponent,
+    CustomerCreateComponent,
+    CustomerDetailsComponent,
+    CustomerUpdateComponent,
+    CustomerFormComponent
   ],
   imports: [
     BrowserModule,
