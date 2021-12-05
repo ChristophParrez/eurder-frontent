@@ -9,27 +9,27 @@ import { environment} from "../../environments/environment";
 })
 export class ItemService {
 
-  private backendUrl = environment.backendUrl + '/items';
+  private readonly BACKEND_URL = environment.backendUrl + '/items';
 
   constructor(private http: HttpClient) { }
 
   getItems(): Observable<Item[]> {
-    return this.http.get<Item[]>(this.backendUrl)
+    return this.http.get<Item[]>(this.BACKEND_URL)
       .pipe(map(item => item.sort((item1, item2) => item1.name.localeCompare((item2.name)))));
   }
 
   getItem(id: string): Observable<Item> {
-    return this.http.get<Item>(this.backendUrl + '/' + id);
+    return this.http.get<Item>(this.BACKEND_URL + '/' + id);
   }
 
-  addItem(dto: any) {
+  addItem(dto: any): Observable<any> {
     console.log('trying to add ');
     console.log(dto);
-    return this.http.post(this.backendUrl, dto);
+    return this.http.post(this.BACKEND_URL, dto);
   }
 
-  updateItem(dto: any, id: string) {
-    return this.http.put(this.backendUrl + '/' + id, dto);
+  updateItem(dto: any, id: string): Observable<any> {
+    return this.http.put(this.BACKEND_URL + '/' + id, dto);
   }
 
 }

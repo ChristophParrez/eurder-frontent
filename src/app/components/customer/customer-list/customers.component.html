@@ -1,1 +1,25 @@
-<p>customers-view works!</p>
+<main-title [showFilter]="true" (filterChanged)="setFilter($event)">
+  Items
+</main-title>
+<app-tool-bar>
+  <div *ngIf="nameFilterText">Searching for name: <strong>{{ nameFilterText }}</strong></div>
+</app-tool-bar>
+<div class="customers" *ngIf="customers">
+  <div class="headers">
+    <div class="id">ID</div>
+    <div class="firstname">Firstname</div>
+    <div class="lastname">Lastname</div>
+    <div class="actions"><input type="button" class="btn" value="New Customer" routerLink="new"></div>
+  </div>
+  <div class="customer" *ngFor="let customer of customers | searchFilter: nameFilterText:'lastname'">
+    <div class="id">{{ customer.id }}</div>
+    <div class="firstname">{{ customer.firstname }}</div>
+    <div class="lastname">{{ customer.lastname }}</div>
+    <div class="actions">
+      <input type="button" class="btn" value="View" routerLink="./{{customer.id}}">
+      <input type="button" class="btn" value="Edit" routerLink="./{{customer.id}}">
+    </div>
+  </div>
+</div>
+<p></p>
+<input type="button" class="btn primary" routerLink="/customers/new" value="Add Customer">

@@ -14,7 +14,7 @@ import { StockUrgencyImagePipe } from './pipe/stock-urgency-image.pipe';
 import { StockUrgencyLabelPipe } from './pipe/stock-urgency-label.pipe';
 import { ContentComponent } from './components/content/content.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { NameFilterPipe } from './pipe/name-filter.pipe';
+import { SearchFilterPipe } from './pipe/search-filter.pipe';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { ItemDetailsComponent } from './components/item/item-details/item-details.component';
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
@@ -41,7 +41,7 @@ import { CustomerFormComponent } from './components/customer/customer-form/custo
     StockUrgencyImagePipe,
     StockUrgencyLabelPipe,
     ContentComponent,
-    NameFilterPipe,
+    SearchFilterPipe,
     DialogComponent,
     ItemDetailsComponent,
     ToolBarComponent,
