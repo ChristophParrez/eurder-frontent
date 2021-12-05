@@ -9,6 +9,7 @@ import { ItemDetailsComponent } from "../components/item/item-details/item-detai
 import { CustomerUpdateComponent } from "../components/customer/customer-update/customer-update.component";
 import { CustomerCreateComponent } from "../components/customer/customer-create/customer-create.component";
 import { CustomerDetailsComponent } from "../components/customer/customer-details/customer-details.component";
+import { BasketListComponent } from "../components/basket/basket-list/basket-list.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,7 +21,7 @@ const routes: Routes = [
   { path: 'customers/new', component: CustomerCreateComponent },
   { path: 'customers/:id', component: CustomerDetailsComponent },
   { path: 'customers/edit/:id', component: CustomerUpdateComponent },
-  { path: 'basket', component: HomeComponent },
+  { path: 'basket', component: BasketListComponent },
   { path: 'about', component: AboutComponent },
 ];
 
