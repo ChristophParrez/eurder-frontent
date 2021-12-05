@@ -27,6 +27,7 @@ import { CustomerCreateComponent } from './components/customer/customer-create/c
 import { CustomerDetailsComponent } from './components/customer/customer-details/customer-details.component';
 import { CustomerUpdateComponent } from './components/customer/customer-update/customer-update.component';
 import { CustomerFormComponent } from './components/customer/customer-form/customer-form.component';
+import { BasketListComponent } from './components/basket/basket-list/basket-list.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CustomerFormComponent } from './components/customer/customer-form/custo
     CustomerCreateComponent,
     CustomerDetailsComponent,
     CustomerUpdateComponent,
-    CustomerFormComponent
+    CustomerFormComponent,
+    BasketListComponent
   ],
   imports: [
     BrowserModule,
