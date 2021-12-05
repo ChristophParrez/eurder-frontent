@@ -18,7 +18,7 @@ export class InputCounterComponent implements OnInit {
   }
 
   ngOnChanges(): void {
-    this.isInvalid = this.value >= this.max;
+    this.isInvalid = this.value > this.max;
   }
 
 }

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about-view',
-  templateUrl: './about-view.component.html',
-  styleUrls: ['./about-view.component.scss']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class AboutViewComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
   year: string = new Date().getFullYear().toString();
 

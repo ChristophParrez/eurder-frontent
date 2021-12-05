@@ -23,6 +23,8 @@ export class ItemService {
   }
 
   addItem(dto: any) {
+    console.log('trying to add ');
+    console.log(dto);
     return this.http.post(this.backendUrl, dto);
   }
 

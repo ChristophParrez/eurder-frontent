@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeViewComponent } from "../components/home-view/home-view.component";
-import { AboutViewComponent } from "../components/about-view/about-view.component";
-import { ItemsViewComponent } from "../components/item/items-view/items-view.component";
-import { CustomersViewComponent } from "../components/customers-view/customers-view.component";
-import { ItemDetailsViewComponent } from "../components/item/item-details-view/item-details-view.component";
+import { HomeComponent } from "../components/home/home.component";
+import { AboutComponent } from "../components/about/about.component";
+import { ItemsComponent } from "../components/item/items/items.component";
+import { CustomersComponent } from "../components/customers/customers.component";
+import { ItemDetailsComponent } from "../components/item/item-details/item-details.component";
+import { ItemCreateComponent } from "../components/item/item-create/item-create.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeViewComponent },
-  { path: 'items', component: ItemsViewComponent },
-  { path: 'items/new', component: ItemsViewComponent },
-  { path: 'items/:id', component: ItemDetailsViewComponent },
-  { path: 'customers', component: CustomersViewComponent },
-  { path: 'basket', component: HomeViewComponent },
-  { path: 'about', component: AboutViewComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'items', component: ItemsComponent },
+  { path: 'items/new', component: ItemCreateComponent },
+  { path: 'items/:id', component: ItemDetailsComponent },
+  { path: 'customers', component: CustomersComponent },
+  { path: 'basket', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({

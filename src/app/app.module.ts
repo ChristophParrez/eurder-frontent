@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './router/app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeViewComponent } from './components/home-view/home-view.component';
-import { AboutViewComponent } from './components/about-view/about-view.component';
-import { ItemsViewComponent } from './components/item/items-view/items-view.component';
-import { CustomersViewComponent } from './components/customers-view/customers-view.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ItemsComponent } from './components/item/items/items.component';
+import { CustomersComponent } from './components/customers/customers.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainTitleComponent } from './components/main-title/main-title.component';
@@ -16,10 +16,10 @@ import { ContentComponent } from './components/content/content.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NameFilterPipe } from './pipe/name-filter.pipe';
 import { DialogComponent } from './components/dialog/dialog.component';
-import { ItemDetailsViewComponent } from './components/item/item-details-view/item-details-view.component';
+import { ItemDetailsComponent } from './components/item/item-details/item-details.component';
 import { ToolBarComponent } from './components/tool-bar/tool-bar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { ItemUpdateComponent } from './components/item/item-edit/item-update.component';
+import { ItemUpdateComponent } from './components/item/item-update/item-update.component';
 import { InputCounterComponent } from './components/input-counter/input-counter.component';
 import { ItemCreateComponent } from './components/item/item-create/item-create.component';
 import { ItemFormComponent } from './components/item/item-form/item-form.component';
@@ -27,10 +27,10 @@ import { ItemFormComponent } from './components/item/item-form/item-form.compone
 @NgModule({
   declarations: [
     AppComponent,
-    HomeViewComponent,
-    AboutViewComponent,
-    ItemsViewComponent,
-    CustomersViewComponent,
+    HomeComponent,
+    AboutComponent,
+    ItemsComponent,
+    CustomersComponent,
     HeaderComponent,
     FooterComponent,
     MainTitleComponent,
@@ -39,7 +39,7 @@ import { ItemFormComponent } from './components/item/item-form/item-form.compone
     ContentComponent,
     NameFilterPipe,
     DialogComponent,
-    ItemDetailsViewComponent,
+    ItemDetailsComponent,
     ToolBarComponent,
     NotFoundComponent,
     ItemUpdateComponent,

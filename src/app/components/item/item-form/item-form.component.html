@@ -1,1 +1,39 @@
-<p>item-form works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="onFormSubmit()">
+  <div class="form-row">
+    <label for="form-name">Name</label>
+    <input id="form-name" formControlName="name" type="text">
+  </div>
+
+  <div class="form-row">
+    <label for="form-desc">Description</label>
+    <textarea id="form-desc" formControlName="description" rows="5"></textarea>
+    <app-input-counter [value]="curDescriptionChars" [max]="maxDescriptionChars"></app-input-counter>
+  </div>
+
+  <div class="form-row">
+    <label for="form-price">Price</label>
+    <input id="form-price" formControlName="price" type="number">
+  </div>
+
+  <div class="form-row">
+    <label for="form-stock">Stock</label>
+    <input id="form-stock" formControlName="amountOfStock" type="number">
+  </div>
+
+  <div class="form-row inline">
+    <ng-container *ngIf="!formDisabled">
+      <input class="btn primary" type="submit" [value]="item ? 'Update' : 'Create'">
+      <ng-container *ngIf="item">
+        <input class="btn" type="button" value="Cancel" (click)="toggleFormDisability(); populateForm()">
+      </ng-container>
+      <ng-container *ngIf="!item">
+        <input class="btn" type="button" routerLink=".." value="Go Back">
+      </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="formDisabled && item">
+      <input class="btn primary" type="button" value="Edit" (click)="toggleFormDisability()">
+      <input class="btn" type="button" routerLink=".." value="Go Back">
+    </ng-container>
+  </div>
+</form>

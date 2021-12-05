@@ -3,11 +3,11 @@ import { Item } from "../../../model/Item";
 import { ItemService } from "../../../service/item.service";
 
 @Component({
-  selector: 'app-items-view',
-  templateUrl: './items-view.component.html',
-  styleUrls: ['./items-view.component.scss']
+  selector: 'app-items',
+  templateUrl: './items.component.html',
+  styleUrls: ['./items.component.scss']
 })
-export class ItemsViewComponent implements OnInit {
+export class ItemsComponent implements OnInit {
 
   items: Item[] = [];
   nameFilterText: string;

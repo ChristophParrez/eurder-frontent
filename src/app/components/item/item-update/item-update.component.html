@@ -1,0 +1,5 @@
+<page-not-found *ngIf="loadingError"></page-not-found>
+<div *ngIf="item">
+  <main-title>Item {{ item.id }}</main-title>
+  <app-item-form (onSubmit)="onSubmit($event)" [formDisabled]="true" [item]="item"></app-item-form>
+</div>
