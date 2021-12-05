@@ -6,7 +6,14 @@ $hover-background-color: #ddd;
 $background-light: #f2f4f6;
 $background-slightly-darker-than-light: #e5e9ed;
 
-$error-text-color: #b30032;
+$table-row-background-color-1: $background-light;
+$table-row-background-color-2: $background-slightly-darker-than-light;
+
+$success-main-color: #00b360;
+$success-contrast-color: #fff;
+$success-hover-background-color: #028f4d;
+
+$error-main-color: #b30032;
 
 $main-padding-x: 25px;
 $main-padding-y: 20px;

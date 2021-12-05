@@ -24,7 +24,7 @@ export class ItemUpdateComponent implements OnInit {
     this.itemService.getItem(this.route.snapshot.paramMap.get('id')!).subscribe({
       next: (item) => this.item = item,
       error: (e) => this.loadingError = true,
-      complete: () => console.info('item is loaded')
+      complete: () => {} //console.info('item is loaded')
     });
   }
 

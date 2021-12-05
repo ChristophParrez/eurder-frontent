@@ -23,8 +23,6 @@ export class ItemService {
   }
 
   addItem(dto: any): Observable<any> {
-    console.log('trying to add ');
-    console.log(dto);
     return this.http.post(this.BACKEND_URL, dto);
   }
 

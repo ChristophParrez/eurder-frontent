@@ -8,7 +8,7 @@
   span {
     transition: all 300ms;
     &.invalid {
-    color: $error-text-color;
+    color: $error-main-color;
     }
   }
 }

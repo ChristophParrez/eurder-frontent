@@ -1,1 +1,62 @@
-<p>customer-form works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="onFormSubmit()">
+  <div class="form-row">
+    <label for="form-firstname">First Name</label>
+    <input id="form-firstname" formControlName="firstname" type="text">
+  </div>
+
+  <div class="form-row">
+    <label for="form-lastname">Last Name</label>
+    <input id="form-lastname" formControlName="lastname" type="text">
+  </div>
+
+  <div class="form-row" formGroupName="email">
+    <label for="form-email">Email</label>
+    <input id="form-email" formControlName="complete" type="text">
+  </div>
+
+  <div class="form-row" formGroupName="address">
+    <label for="form-address-street">Street</label>
+    <input id="form-address-street" formControlName="streetName" type="text">
+  </div>
+
+  <div class="form-row" formGroupName="address">
+    <label for="form-address-house-number">House Number</label>
+    <input id="form-address-house-number" formControlName="houseNumber" type="text">
+  </div>
+
+  <div class="form-row" formGroupName="address">
+    <label for="form-address-postal-code">Postal Code</label>
+    <input id="form-address-postal-code" formControlName="postalCode" type="text">
+  </div>
+
+  <div class="form-row" formGroupName="address">
+    <label for="form-address-postal-country">Country</label>
+    <input id="form-address-postal-country" formControlName="country" type="text">
+  </div>
+
+  <div class="form-row" formGroupName="phoneNumber">
+    <label for="form-phoneNumber">Phone Number</label>
+    <input id="form-phoneNumber" formControlName="number" type="text">
+  </div>
+
+  <div class="form-row inline">
+
+    <ng-container *ngIf="editMode">
+      <ng-container *ngIf="!formDisabled">
+        <input class="btn primary" type="submit" value="Update">
+        <input class="btn" type="button" value="Cancel" (click)="toggleFormDisability(); populateForm()">
+      </ng-container>
+      <ng-container *ngIf="formDisabled">
+        <input class="btn primary" type="button" value="Edit" (click)="toggleFormDisability()">
+        <input class="btn" type="button" routerLink="/customers/" value="Go Back">
+      </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="!editMode">
+      <input class="btn primary" type="submit" value="Create">
+      <input class="btn" type="button" routerLink=".." value="Go Back">
+    </ng-container>
+
+
+  </div>
+</form>

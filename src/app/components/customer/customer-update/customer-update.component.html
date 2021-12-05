@@ -1,1 +1,5 @@
-<p>customer-update works!</p>
+<page-not-found *ngIf="loadingError"></page-not-found>
+<div *ngIf="customer">
+  <main-title>Customer {{ customer.id }}</main-title>
+  <app-customer-form (onSubmit)="onSubmit($event)" [formDisabled]="true" [customer]="customer"></app-customer-form>
+</div>

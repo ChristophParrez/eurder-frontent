@@ -4,8 +4,11 @@ import { HomeComponent } from "../components/home/home.component";
 import { AboutComponent } from "../components/about/about.component";
 import { ItemsComponent } from "../components/item/item-list/items.component";
 import { CustomersComponent } from "../components/customer/customer-list/customers.component";
-import { ItemDetailsComponent } from "../components/item/item-details/item-details.component";
 import { ItemCreateComponent } from "../components/item/item-create/item-create.component";
+import { ItemDetailsComponent } from "../components/item/item-details/item-details.component";
+import { CustomerUpdateComponent } from "../components/customer/customer-update/customer-update.component";
+import { CustomerCreateComponent } from "../components/customer/customer-create/customer-create.component";
+import { CustomerDetailsComponent } from "../components/customer/customer-details/customer-details.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,6 +17,9 @@ const routes: Routes = [
   { path: 'items/new', component: ItemCreateComponent },
   { path: 'items/:id', component: ItemDetailsComponent },
   { path: 'customers', component: CustomersComponent },
+  { path: 'customers/new', component: CustomerCreateComponent },
+  { path: 'customers/:id', component: CustomerDetailsComponent },
+  { path: 'customers/edit/:id', component: CustomerUpdateComponent },
   { path: 'basket', component: HomeComponent },
   { path: 'about', component: AboutComponent },
 ];

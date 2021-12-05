@@ -1,10 +1,27 @@
+@import "../../../../sass/variables";
+
+.customers-table {
+  //border: 1px solid rgba($body-text-color, 0.3);
+  //border-radius: $border-radius;
+  //overflow: hidden;
+}
+
 .headers, .customer {
   display: flex;
   //margin: 0 -20px;
-
+  align-items: center;
+  border: 1px solid rgba($body-text-color, 0.1);
+  &:first-child {
+    border-radius: $border-radius $border-radius 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
   & > * {
-    padding: 20px;
-    border: 1px solid red;
+    padding: 15px 25px;
   }
 
   .id {
@@ -23,12 +40,20 @@
     flex-basis: 25%;
     display: flex;
     gap: 10px;
+    .btn {
+      padding: 15px;
+    }
   }
 }
 
+.headers {
+  background: $table-row-background-color-2;
+  font-weight: 600;
+}
+
 .customer {
-  background: #0063b3;
+  background: $table-row-background-color-1;
   &:nth-child(odd) {
-    background: #ddd;
+    background: $table-row-background-color-2;
   }
 }

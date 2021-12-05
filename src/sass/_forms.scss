@@ -30,12 +30,13 @@ input, textarea, select {
   &.ng-touched.ng-invalid {
     background: #f5e5ea;
     border: 1px solid rgba(#b30032, 0.2);
-    color: $error-text-color;
+    color: $error-main-color;
   }
   &.btn {
     cursor: pointer;
     padding: 20px;
-    width: 25%;
+    //width: 25%;
+    max-width: 400px;
     &:hover {
       background: $background-slightly-darker-than-light;
     }
@@ -45,6 +46,14 @@ input, textarea, select {
       border: none;
       &:active, &:hover {
         background: $accent-color-hover;
+      }
+    }
+    &.create {
+      background: $success-main-color;
+      color: $success-contrast-color;
+      border: none;
+      &:active, &:hover {
+        background: $success-hover-background-color;
       }
     }
   }
