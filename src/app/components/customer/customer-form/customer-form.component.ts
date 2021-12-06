@@ -22,8 +22,8 @@ export class CustomerFormComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.formGroup && this.formDisabled) this.formGroup.disable();
-    this.populateForm();
     if (this.customer) this.editMode = true;
+    this.populateForm();
   }
 
   onFormSubmit(): void {
